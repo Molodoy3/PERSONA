@@ -124,8 +124,6 @@ function windowLoad() {
 
     const trendsSlider = document.querySelector('.trends');
     if(trendsSlider){
-        console.log(trendsSlider); // Добавьте это для проверки
-
         new Swiper(trendsSlider, {
             modules: [Navigation, Keyboard],
             wrapperClass: 'trends__wrapper',
@@ -136,6 +134,30 @@ function windowLoad() {
             },
             direction: 'horizontal',
             slidesPerView: 1,
+            loop: false,
+            speed: 800,
+            spaceBetween: 0,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            keyboard: {
+                enabled: true,
+            }
+        });
+    }
+
+    const brendsCatalogSlider = document.querySelector('.brends-slider');
+    if(brendsCatalogSlider){
+        new Swiper(brendsCatalogSlider, {
+            modules: [Navigation, Keyboard],
+            wrapperClass: 'brends-slider__wrapper',
+            slideClass: 'brends-slider__slide',
+            navigation: {
+                prevEl: '#bre1',
+                nextEl: '#bre2',
+            },
+            direction: 'horizontal',
+            slidesPerView: 2.5,
             loop: false,
             speed: 800,
             spaceBetween: 0,

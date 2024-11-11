@@ -111,7 +111,7 @@
             padding-left: rem(14);
         }
         @media (max-width: 730px) {
-            display: none;
+            display: none !important;
         }
     }
 
@@ -181,7 +181,7 @@
             left 0.3s ease,
             opacity 0.3s ease;
             opacity: 0;
-            //z-index: -10;
+            z-index: -1;
             
             &.open {
                 z-index: 5;
