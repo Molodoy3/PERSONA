@@ -1,0 +1,54 @@
+.footer {
+    background-color: #2B2A29;
+    @include adaptiv-value('padding-top', 40, 20, 1);
+    padding-bottom: rem(40);
+    color: var(--white);
+    &__container {
+        display: flex;
+        gap: rem(20);
+        justify-content: space-between;
+        @media (max-width: $md3){
+            flex-wrap: wrap;
+            
+        }
+    }
+
+    &__col {
+        @media (max-width: $md4){
+            flex: 0 1 100%;
+        }
+    }
+
+    &__title {
+        @include adaptiv-value('margin-bottom', 20, 10, 1);
+        font-family: "Cormorant", serif;
+        text-transform: uppercase;
+        @include adaptiv-value('font-size', 40, 20, 1);
+        font-weight: 600;
+        @media (max-width: $md4){
+            text-align: center;
+        }
+    }
+
+    &__list {
+        @include adaptiv-value('font-size', 26, 14, 1);
+        font-family: "Cormorant", serif;
+        font-weight: 600;
+        li {
+            &:not(:last-child) {
+                @include adaptiv-value('margin-bottom', 20, 10, 1);
+            }
+        }
+        a {
+            transition: color 0.3s ease;
+            &:focus {
+                color: var(--blue);
+            }
+            @media (any-hover: hover) {
+                &:hover{
+                    color: var(--blue);
+                }
+            }
+        }
+    }
+}

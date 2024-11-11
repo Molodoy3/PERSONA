@@ -1,0 +1,642 @@
+/*Подключение функций, миксинов /=============================================================================*/
+@use "sass:math";
+@import "functions";
+/*=============================================================================================================*/
+/*Подключение шрифтов /=============================================================================*/
+/* @import 'fonts.scss'; */
+/*=============================================================================================================*/
+/*Размер шрифта по умолчанию /=============================================================================*/
+$mainFontSize: 20;
+/*=============================================================================================================*/
+/*Контейнер и сетка /=============================================================================*/
+$mw: 1894; //? +54
+$minwidth: rem(320);
+$md1: rem($mw + 12);
+$md2: rem(992.98);
+$md3: rem(767.98);
+$md4: rem(479.98);
+[class*="__container"] {
+    max-width: rem($mw);
+    margin: 0 auto;
+    padding: 0 rem(27);
+    width: 100%;
+}
+/* .container{max-width: $mw; margin: 0 auto; width: 100%;
+    @media (max-width: $md1){max-width: 970px;}
+    @media (max-width: $md2){max-width: 750px;}
+    @media (max-width: $md3){max-width: 470px; padding: 0 10px;}
+    @media (max-width: $md4){max-width: 100%; padding: 0 10px;}
+} */
+/*=============================================================================================================*/
+/*Иконочный шрифт /=============================================================================*/
+/* @import 'icons'; */
+/*=============================================================================================================*/
+/*Обнуление /=============================================================================*/
+@import "null";
+/*=============================================================================================================*/
+/*Переменные для адаптивного свойства /=============================================================================*/
+$maxWidth: 1920; //макс ширина
+$maxWidthContainer: 1920; //ширина макета
+/*=============================================================================================================*/
+/*Основные цвета /=============================================================================*/
+:root {
+    --color-main: #2b2a29;
+    --blue: #0abab5;
+    --blue-hover: #09aaa5;
+    --blue-hover2: #08726e;
+    --white: #fff;
+}
+/*=============================================================================================================*/
+/*Основные стили /=============================================================================*/
+body {
+    font-size: rem($mainFontSize);
+    font-family: "Montserrat", sans-serif;
+    // font-family: "Cormorant", serif;
+    &.lock {
+        overflow: hidden;
+    }
+}
+a {
+    color: inherit;
+}
+button {
+    background-color: transparent;
+}
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+.page {
+    flex: 1 1 auto;
+}
+/*=============================================================================================================*/
+/*Общие блоки /=============================================================================*/
+.title {
+    font-family: "Cormorant", serif;
+    @include adaptiv-value("font-size", 64, 24, 1);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: rem(20);
+    color: var(--blue);
+    text-transform: uppercase;
+}
+section {
+    @include adaptiv-value("margin-bottom", 50, 40, 1);
+}
+.button {
+    @include adaptiv-value("padding-top", 16.5, 9, 1);
+    @include adaptiv-value("padding-bottom", 16.5, 9, 1);
+    @include adaptiv-value("padding-right", 47, 40, 1);
+    @include adaptiv-value("padding-left", 47, 40, 1);
+    @include adaptiv-value("font-size", 24, 12, 1);
+    background-color: var(--blue);
+    text-align: center;
+    font-family: "Cormorant", serif;
+    text-transform: uppercase;
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: 600;
+    border-radius: rem(5);
+    transition: background-color 0.3s ease;
+    color: var(--white);
+    @media (max-width: $md4) {
+        display: block;
+    }
+    &:focus {
+        background: var(--blue-hover);
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            background: var(--blue-hover);
+        }
+    }
+    &_border {
+        background-color: transparent;
+        border: rem(1) solid var(--blue);
+        color: var(--blue);
+        transition: all 0.3s ease;
+        &:focus {
+            color: var(--blue-hover2);
+            border-color: var(--blue-hover2);
+            background-color: transparent;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--blue-hover2);
+                background-color: transparent;
+                border-color: var(--blue-hover2);
+            }
+        }
+    }
+}
+.input {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(244, 249, 245);
+    @include adaptiv-value("font-size", 26, 12, 1);
+    font-weight: 600;
+    font-family: "Cormorant", serif;
+    @include adaptiv-value("padding-top", 14, 12, 1);
+    @include adaptiv-value("padding-bottom", 14, 12, 1);
+    @include adaptiv-value("padding-right", 20, 14, 1);
+    @include adaptiv-value("padding-left", 20, 14, 1);
+    @include adaptiv-value("border-radius", 10, 5, 1);
+}
+//общие для радио
+.radio-item{
+    align-items: center;
+    display: inline-flex;
+    @include adaptiv-value("column-gap", 9, 5, 1);
+}
+.radio{
+    display: none;
+    &:checked + .radio-checkmark{
+        &::after{
+            content:'';
+            @include adaptiv-value('width', 22, 14, 1);
+            @include adaptiv-value('height', 22, 14, 1);
+            background-color: var(--blue);
+            position: absolute;
+            top: rem(4);
+            left: rem(4);
+            border-radius: 50%;
+        }
+    }
+}
+.radio-checkmark{
+    @include adaptiv-value("width", 31, 21, 1);
+    @include adaptiv-value("height", 31, 21, 1);
+    border-radius: 50%;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(244, 249, 245);
+    display: inline-block;
+}
+/*=============================================================================================================*/
+@import "header";
+/*=============================================================================================================*/
+.welcome-slider {
+    overflow: hidden;
+    padding-top: rem(20);
+    position: relative;
+    &__container {
+        @media (max-width: $md4) {
+            padding: 0 0px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+    }
+
+    &__item {
+        flex-shrink: 0;
+        @media (min-width: $md4) {
+            min-height: calc(100vh - 145px);
+        }
+        padding-top: rem(60);
+        padding-bottom: rem(60);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: var(--blue);
+        position: relative;
+        padding-right: rem(50);
+        padding-left: rem(50);
+    }
+
+    &__title {
+        @include adaptiv-value("font-size", 150, 24, 1);
+        font-weight: 700;
+        color: var(--white);
+        max-width: rem(1170);
+        margin: 0 auto;
+        margin-bottom: rem(10);
+        line-height: perc(30, 24);
+    }
+
+    &__text {
+        @include adaptiv-value("font-size", 64, 16, 1);
+        color: #b6eae9;
+        font-family: "Cormorant", serif;
+        max-width: rem(899);
+        margin: 0 auto;
+    }
+
+    &__arrows {
+    }
+}
+.arrows {
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        img {
+            transition: transform 0.3s ease;
+            @include adaptiv-value("width", 20, 12, 1);
+        }
+        &:focus {
+            img {
+                transform: scale(1.1);
+            }
+            .arrows__prev {
+                img {
+                    transform: scale(1.1) rotate(180deg);
+                }
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+                &.arrows__prev {
+                    img {
+                        transform: scale(1.1) rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &__prev {
+        @include adaptiv-value("left", 70, 27, 1);
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__next {
+        @include adaptiv-value("right", 70, 27, 1);
+    }
+}
+
+/*=============================================================================================================*/
+.new {
+    position: relative;
+    &__container {
+    }
+
+    &__title {
+    }
+
+    &__slider {
+        position: relative;
+        overflow: hidden;
+        max-width: rem(1420);
+        margin: 0 auto;
+        //padding: 0 rem(20);
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__slide {
+        flex-shrink: 0;
+    }
+
+    &__item {
+    }
+
+    &__arrows {
+    }
+    .arrows__prev {
+        @include adaptiv-value("left", 170, 27, 1);
+    }
+    .arrows__next {
+        @include adaptiv-value("right", 170, 27, 1);
+    }
+}
+.items-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+    @include adaptiv-value("gap", 20, 10, 1);
+    justify-content: center;
+}
+.item {
+    transition: background-color 0.3s ease;
+    display: block;
+    &:focus {
+        .item__title {
+            color: var(--blue);
+        }
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            .item__title {
+                color: var(--blue);
+            }
+        }
+    }
+    &__image {
+        @include adaptiv-value("height", 260, 170, 1);
+        border: 1px solid rgba(43, 42, 41, 0.1);
+        border-radius: 5px;
+        position: relative;
+        margin-bottom: rem(10);
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 500;
+        transition: all 0.3s ease 0s;
+        @include adaptiv-value("font-size", 20, 16, 1);
+    }
+}
+
+/*=============================================================================================================*/
+.new-slider {
+    overflow: hidden;
+    padding-top: rem(20);
+    position: relative;
+    &__container {
+        @media (max-width: $md4) {
+            padding: 0 0px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+    }
+
+    &__item {
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        flex-shrink: 0;
+        @include adaptiv-value("padding-top", 610, 155, 1);
+        @include adaptiv-value("padding-bottom", 47, 15, 1);
+
+        text-align: center;
+        position: relative;
+        padding-right: rem(50);
+        padding-left: rem(50);
+    }
+
+    &__title {
+        @include adaptiv-value("font-size", 64, 18, 1);
+        font-weight: 700;
+        color: var(--white);
+        position: relative;
+        font-family: "Cormorant", serif;
+        mix-blend-mode: difference;
+        max-width: rem(1170);
+        margin: 0 auto;
+        margin-bottom: rem(10);
+        line-height: perc(30, 24);
+        text-transform: uppercase;
+    }
+
+    &__link {
+        position: relative;
+        @include adaptiv-value("font-size", 24, 12, 1);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+        &:focus {
+            color: var(--blue);
+            text-decoration: underline;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--blue);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__arrows {
+    }
+}
+
+/*=============================================================================================================*/
+.popular {
+    &__container {
+    }
+
+    &__title {
+    }
+    &__bottom {
+        text-align: center;
+    }
+    &__row {
+        @include adaptiv-value("margin-bottom", 40, 20, 1);
+    }
+}
+.trends {
+    img {
+        position: relative;
+        //object-fit: none;
+        max-width: 100%;
+        max-width: rem(540);
+        height: auto;
+        margin-bottom: rem(20);
+    }
+    &__slide {
+        @include adaptiv-value("padding-top", 50, 20, 1);
+        padding-bottom: rem(20);
+        border: 1px solid rgb(234, 234, 234);
+    }
+    .new-slider__title {
+        color: #000;
+    }
+}
+
+/*=============================================================================================================*/
+.about {
+    &__container {
+    }
+    &__body {
+        display: flex;
+        @include adaptiv-value("column-gap", 20, 10, 1);
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 perc(755, 1840);
+        @media (max-width: $md4) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        text-align: left;
+        @media (max-width: $md4) {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        @include adaptiv-value("font-size", 30, 12, 1);
+        p {
+            &:not(:last-child) {
+                @include adaptiv-value("margin-bottom", 33, 14, 1);
+            }
+        }
+        flex: 1 1 auto;
+        margin-bottom: rem(40);
+    }
+
+    &__button {
+        align-self: start;
+        @media (max-width: $md4) {
+            align-self: stretch;
+        }
+    }
+
+    &__image {
+        flex: 1 1 auto;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        overflow: hidden;
+        @include adaptiv-value("height", 550, 254, 1);
+        @media (max-width: $md4) {
+            display: none;
+        }
+        position: relative;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+/*=============================================================================================================*/
+.contacts {
+    background-color: #f5f5f5;
+    @include adaptiv-value("padding-top", 40, 30, 1);
+    @include adaptiv-value("padding-bottom", 40, 30, 1);
+    &__container {
+        @media (min-width: $md4) {
+            display: flex;
+            
+            @include adaptiv-value("column-gap", 30, 10, 1);
+        }
+        @media (max-width: $md3){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__col {
+        @media (min-width: $md4) {
+            flex: 1 1 50%;
+        }
+    }
+
+    &__title-help {
+        @include adaptiv-value("font-size", 50, 24, 1);
+        @media (min-width: $md4) {
+            text-align: left;
+        }
+    }
+
+    &__list {
+        @media (max-width: $md3){
+            margin-bottom: rem(30);
+        }
+        li,
+        a {
+            display: flex;
+            align-items: center;
+            @include adaptiv-value("column-gap", 10, 5, 1);
+        }
+        li {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            @media (max-width: $md4) {
+                font-weight: 600;
+            }
+            @include adaptiv-value("font-size", 24, 14, 1);
+            &:not(:last-child) {
+                margin-bottom: rem(10);
+            }
+        }
+        a {
+            transition: color 0.3s ease;
+            &:focus {
+                color: var(--blue);
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    color: var(--blue);
+                }
+            }
+        }
+    }
+
+    &__title-notices {
+        @include adaptiv-value("font-size", 50, 24, 1);
+        @media (min-width: $md4) {
+            text-align: right;
+        }
+    }
+
+    &__form {
+    }
+
+    &__form-cols {
+        @include adaptiv-value("margin-bottom", 30, 15, 1);
+        @include adaptiv-value("column-gap", 20, 10, 1);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__input {
+        flex: 1 1 50%;
+        color: rgba(0, 117, 113, 0.5);
+    }
+
+    &__button {
+        flex: 1 1 50%;
+        @media (max-width: $md4){
+            padding-right: rem(20.5);
+            padding-left: rem(20.5);
+        }
+    }
+
+    &__gender {
+        display: flex;
+        column-gap: rem(23);
+    }
+
+    &__radio-item {
+        
+    }
+
+    &__radio {
+       
+    }
+}
+
+
+
+/*=============================================================================================================*/
+/*=============================================================================================================*/
+/*=============================================================================================================*/
+/*=============================================================================================================*/
+/*=============================================================================================================*/
+/*=============================================================================================================*/
+//footer
+@import "footer";
