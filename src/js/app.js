@@ -4,14 +4,14 @@
 //import customOpenImage from './modules/customOpenImage.js';
 //?Импор Свайпера (снипет swp)
 import Swiper from 'swiper';
-import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel, Thumbs } from 'swiper/modules';
 
 
 //?Основные скрипты (делегирование, шапка)
 import { delegationClick } from './modules/script.js';
 //?Для открытия, закрытия бургера обязательно добавить эту ф-ию (только импортировать, запускать не надо)
 import { closeMenu } from './modules/script.js';
- 
+
 
 //?Функция определения мобильного устройства
 //import { isMobile } from "./modules/functions";
@@ -29,12 +29,12 @@ import { useDynamicAdapt } from './modules/dynamic.js'
 
 window.addEventListener("load", windowLoad);
 function windowLoad() {
-    
+
     delegationClick();
     useDynamicAdapt();
 
     const welcomeSlider = document.querySelector('.welcome-slider');
-    if(welcomeSlider){
+    if (welcomeSlider) {
         new Swiper(welcomeSlider, {
             modules: [Navigation, Keyboard],
             wrapperClass: 'welcome-slider__wrapper',
@@ -58,7 +58,7 @@ function windowLoad() {
     }
 
     const newSlider = document.querySelector('.new__slider');
-    if(newSlider){
+    if (newSlider) {
         new Swiper(newSlider, {
             modules: [Navigation, Keyboard, Mousewheel],
             wrapperClass: 'new__wrapper',
@@ -99,7 +99,7 @@ function windowLoad() {
     }
 
     const newBigSlider = document.querySelector('.new-slider');
-    if(newBigSlider){
+    if (newBigSlider) {
         new Swiper(newBigSlider, {
             modules: [Navigation, Keyboard],
             wrapperClass: 'new-slider__wrapper',
@@ -123,7 +123,7 @@ function windowLoad() {
     }
 
     const trendsSlider = document.querySelector('.trends');
-    if(trendsSlider){
+    if (trendsSlider) {
         new Swiper(trendsSlider, {
             modules: [Navigation, Keyboard],
             wrapperClass: 'trends__wrapper',
@@ -147,7 +147,7 @@ function windowLoad() {
     }
 
     const brendsCatalogSlider = document.querySelector('.brends-slider');
-    if(brendsCatalogSlider){
+    if (brendsCatalogSlider) {
         new Swiper(brendsCatalogSlider, {
             modules: [Navigation, Keyboard],
             wrapperClass: 'brends-slider__wrapper',
@@ -169,4 +169,101 @@ function windowLoad() {
             }
         });
     }
+
+    let swp;
+    const imagesMiniProductSlider = document.querySelector('.mini-slider-images');
+    if (imagesMiniProductSlider) {
+        swp = new Swiper(imagesMiniProductSlider, {
+            wrapperClass: 'mini-slider-images__wrapper',
+            slideClass: 'mini-slider-images__slide',
+            direction: 'vertical',
+            slidesPerView: 7,
+            loop: false,
+            speed: 800,
+            spaceBetween: 0,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true
+        });
+    }
+    const imagesProductSlider = document.querySelector('.images-product-slider');
+    if (imagesProductSlider) {
+        new Swiper(imagesProductSlider, {
+            modules: [Keyboard, Thumbs],
+            wrapperClass: 'images-product-slider__wrapper',
+            slideClass: 'images-product-slider__slide',
+            direction: 'horizontal',
+            slidesPerView: 1,
+            loop: false,
+            speed: 800,
+            spaceBetween: 20,
+            observer: true,
+            thumbs: {
+                swiper: swp
+            },
+            observeParents: true,
+            observeSlideChildren: true,
+            keyboard: {
+                enabled: true,
+            }
+        });
+    }
+
+    const tabs = document.querySelectorAll('[data-tabs]');
+    if (window.innerWidth < 600 && tabs.length) {
+        tabs.forEach(tab => {
+            const activeFilter = tab.querySelector('.active');
+            if (activeFilter) {
+                const filterValue = activeFilter.dataset.filter;
+                tab.querySelectorAll('[data-filter-item]').forEach(filterItem => {
+                    if (filterItem.dataset.filterItem != filterValue) {
+                        filterItem.style.cssText = `position: absolute;opacity: 0;`;
+                    }
+                });
+            }
+        });
+    }
+
+    const similarSlider = document.querySelector('.similar__slider');
+    if (similarSlider) {
+        new Swiper(similarSlider, {
+            modules: [Keyboard, Navigation],
+            wrapperClass: 'similar__wrapper',
+            slideClass: 'item',
+            direction: 'horizontal',
+            slidesPerView: 4,
+            loop: false,
+            navigation: {
+                prevEl: '#sim1',
+                nextEl: '#sim2',
+            },
+            breakpoints: {
+                900: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                580: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                380: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+            },
+            speed: 800,
+            spaceBetween: 20,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            keyboard: {
+                enabled: true,
+            }
+        });
+    }
+
 }

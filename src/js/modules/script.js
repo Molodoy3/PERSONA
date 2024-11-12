@@ -8,10 +8,10 @@ export function delegationClick() {
             const menuBody = document.querySelector('.menu__body');
             menuBody.classList.toggle('open');
             targetElement.closest('.menu__icon').classList.toggle('active');
-            if (menuBody.classList.contains('open'))
+            /* if (menuBody.classList.contains('open'))
                 document.body.classList.add('lock');
               else
-                document.body.classList.remove('lock');
+                document.body.classList.remove('lock'); */
 
             if (menuBody.classList.contains('open')) {
                 window.addEventListener('resize', closeMenu);
@@ -27,7 +27,7 @@ export function delegationClick() {
                 if (iconMenu) {
                     iconMenu.classList.remove('active');
                 }
-                document.body.classList.remove('lock');
+                //document.body.classList.remove('lock');
             }
         }
 
@@ -112,26 +112,8 @@ export function delegationClick() {
         }*/
 
         //?Табы
-        //Это добавить в app.js, если изначально видны не все элементы в табах, а только определенной категории
-        /*
-        if (tabs.length) {
-            tabs.forEach(tab => {
-                const activeFilter = tab.querySelector('.active');
-                if (activeFilter) {
-                    const filterValue = activeFilter.dataset.filter;
-                    if (filterValue != '*') {                        
-                        tab.querySelectorAll('[data-filter-item]').forEach(filterItem => {
-                            if (filterItem.dataset.filterItem != filterValue) {
-                                filterItem.style.cssText = `position: absolute;opacity: 0;`;
-                            }
-                        });
-                    }
-                }
-            });
-        }
-        */
         //Основной код
-        /*if (targetElement.closest('[data-filter]')) {
+        if (targetElement.closest('[data-filter]')) {
             const itemFilter = targetElement.closest('[data-filter]');
             const filterValue = itemFilter.dataset.filter;
             const tabs = itemFilter.closest('[data-tabs]');
@@ -174,7 +156,7 @@ export function delegationClick() {
                 }, durationAnimation);
             }
             e.preventDefault();
-        }*/
+        }
 
         //?Пульсирующий эффект (Ripple Effect)
         //Надо для работы - атрубыт data-ripple со значение once, если надо только максимум один круг выводить
