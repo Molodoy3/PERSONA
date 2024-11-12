@@ -878,7 +878,7 @@ section {
     &__search-form {
     }
     &__search-input {
-        padding-left: rem(55);
+        padding-left: rem(55) !important;
         width: 100%;
         position: relative;
         background: url(../img/icons/search-catalog.svg) 18px 50% / 25px no-repeat;
