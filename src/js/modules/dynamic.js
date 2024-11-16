@@ -30,16 +30,18 @@ export function useDynamicAdapt(type = 'max') {
 
   /** @type {dMediaQuery[]} */
   const dMediaQueries = getDMediaQueries(dNodes)
+  dMediaQueries.sdf = {
+    breakpoint: "600",
+    query: "600"
+  }
 
   dMediaQueries.forEach((dMediaQuery) => {
     const matchMedia = window.matchMedia(dMediaQuery.query)
+
     // массив объектов с подходящим брейкпоинтом
     const filteredDNodes = dNodes.filter(({ breakpoint }) => breakpoint === dMediaQuery.breakpoint)
     const mediaHandler = getMediaHandler(matchMedia, filteredDNodes)
     matchMedia.addEventListener('change', mediaHandler)
-
-    // Проверка на data-da-adaptiv
-
 
     mediaHandler()
   })
@@ -89,12 +91,13 @@ export function useDynamicAdapt(type = 'max') {
    */
   function getMediaHandler(matchMedia, items) {
     return function mediaHandler() {
-      if (window.innerWidth < 600) {
-        return; // Если ширина экрана больше 600px, выходим из функции
-      }
+
       if (matchMedia.matches) {
         items.forEach((item) => {
-          moveTo(item)
+
+          //! добавил условие order.html чтобы не переносилось при ширине больше 600
+          if (!item.element.dataset.daAdaptiv || window.innerWidth > item.element.dataset.daAdaptiv)
+            moveTo(item)
         })
 
         items.reverse()

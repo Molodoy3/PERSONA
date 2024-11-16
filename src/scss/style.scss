@@ -1849,10 +1849,10 @@ section {
             @include adaptiv-value("height", 493, 233, 1);
         }
         @media (max-width: $md2) {
-            flex: 0 0 rem(680);
+            flex: 0 1 rem(680);
         }
         @media (max-width: 1150px) {
-            flex: 0 0 rem(530);
+            flex: 0 1 rem(530);
         }
         @media (max-width: 910px) {
             flex: 1 0 rem(430);

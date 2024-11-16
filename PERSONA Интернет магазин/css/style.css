@@ -4688,8 +4688,8 @@ select:focus + .catalog__sort::before {
 
   .gift-card__images {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.125rem;
-            flex: 0 0 33.125rem;
+        -ms-flex: 0 1 33.125rem;
+            flex: 0 1 33.125rem;
   }
 }
 
@@ -4927,8 +4927,8 @@ select:focus + .catalog__sort::before {
 
   .gift-card__images {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 42.5rem;
-            flex: 0 0 42.5rem;
+        -ms-flex: 0 1 42.5rem;
+            flex: 0 1 42.5rem;
   }
 
   .order__col {
