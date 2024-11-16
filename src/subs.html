@@ -2,41 +2,43 @@
 <html lang="ru">
   @@include('html/head.html', { 'title': 'Главная' })
   <body>
-    < class="wrapper"> @@include('html/header.html')
-    <main class="page">
-      <div class="cabinet">
-        <div class="cabinet__container">
-          @@include('html/menu.html')
-          <section class="cabinet__content">
-            <h1 class="cabinet__main-title title">Подписки</h1>
-            <div class="cabinet__items">
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <div class="cabinet">
+          <div class="cabinet__container">
+            @@include('html/menu.html')
+            <section class="cabinet__content">
+              <h1 class="cabinet__main-title title">Подписки</h1>
+              <div class="cabinet__items">
                 <a href="" class="cabinet__item">
-                    <img src='@img/icons/star.svg' alt='звездочка'>
-                    Новинки коллекций
+                  <img src="@img/icons/star.svg" alt="звездочка" />
+                  Новинки коллекций
                 </a>
                 <a href="" class="cabinet__item">
-                    <img src='@img/icons/star.svg' alt='звездочка'>
-                    Выбор стилиста
+                  <img src="@img/icons/star.svg" alt="звездочка" />
+                  Выбор стилиста
                 </a>
                 <a href="" class="cabinet__item">
-                    <img src='@img/icons/star.svg' alt='звездочка'>
-                    Выбор beauty-редактора
+                  <img src="@img/icons/star.svg" alt="звездочка" />
+                  Выбор beauty-редактора
                 </a>
                 <a href="" class="cabinet__item">
-                    <img src='@img/icons/star.svg' alt='звездочка'>
-                    Находки недели
+                  <img src="@img/icons/star.svg" alt="звездочка" />
+                  Находки недели
                 </a>
                 <a href="" class="cabinet__item">
-                    <img src='@img/icons/star.svg' alt='звездочка'>
-                    Новости магазина
+                  <img src="@img/icons/star.svg" alt="звездочка" />
+                  Новости магазина
                 </a>
-            </div>
-          </section>
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
-      @@include('html/contacts.html')
-    </main>
-    @@include('html/footer.html')
+        @@include('html/contacts.html')
+      </main>
+      @@include('html/footer.html')
+    </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>

@@ -2,52 +2,89 @@
 <html lang="ru">
   @@include('html/head.html', { 'title': 'Главная' })
   <body>
-    < class="wrapper"> @@include('html/header.html')
-    <main class="page">
-      <div class="cabinet">
-        <div class="cabinet__container">
-          @@include('html/menu.html')
-          <section class="cabinet__content">
-            <div class="data">
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <div class="cabinet">
+          <div class="cabinet__container">
+            @@include('html/menu.html')
+            <section class="cabinet__content">
+              <div class="data">
                 <h1 class="data__title title">Личные данные</h1>
                 <form action="#" class="data__form">
-                    <div class="data__item">
-                        <label for="name">Имя</label>
-                        <input class="input" type="text" placeholder="Ваше имя" id="name">
-                    </div>
-                    <div class="data__item">
-                        <label for="lastname">Фамилия</label>
-                        <input class="input" type="text" placeholder="Ваша фамилия" id="lastname">
-                    </div>
-                    <div class="data__item">
-                        <label for="patronyc">Отчество</label>
-                        <input class="input" type="text" placeholder="Ваше отчество" id="patronyc">
-                    </div>
-                    <div class="data__item">
-                        <label for="tel">Телефон</label>
-                        <input class="input" type="text" placeholder="Ваш номер телефона" id="tel">
-                    </div>
-                    <div class="data__item">
-                        <label for="email">E-mail</label>
-                        <input class="input" type="text" placeholder="Ваш e-mail" id="email">
-                    </div>
-                    <div class="data__item">
-                        <label for="gender">Пол</label>
-                        <input class="input" type="text" placeholder="Выберите пол" id="gender">
-                    </div>
-                    <div class="data__item">
-                        <label for="date">Дата рождения</label>
-                        <input class="input" type="text" placeholder="DD.MM.YYYY" id="date">
-                    </div>
-                    <button type="submit" class="button">Сохранить</button>
+                  <div class="data__item">
+                    <label for="name">Имя</label>
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Ваше имя"
+                      id="name"
+                    />
+                  </div>
+                  <div class="data__item">
+                    <label for="lastname">Фамилия</label>
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Ваша фамилия"
+                      id="lastname"
+                    />
+                  </div>
+                  <div class="data__item">
+                    <label for="patronyc">Отчество</label>
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Ваше отчество"
+                      id="patronyc"
+                    />
+                  </div>
+                  <div class="data__item">
+                    <label for="tel">Телефон</label>
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Ваш номер телефона"
+                      id="tel"
+                    />
+                  </div>
+                  <div class="data__item">
+                    <label for="email">E-mail</label>
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Ваш e-mail"
+                      id="email"
+                    />
+                  </div>
+                  <div class="data__item">
+                    <label for="gender">Пол</label>
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Выберите пол"
+                      id="gender"
+                    />
+                  </div>
+                  <div class="data__item">
+                    <label for="date">Дата рождения</label>
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="DD.MM.YYYY"
+                      id="date"
+                    />
+                  </div>
+                  <button type="submit" class="button">Сохранить</button>
                 </form>
-            </div>
-          </section>
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
-      @@include('html/contacts.html')
-    </main>
-    @@include('html/footer.html')
+        @@include('html/contacts.html')
+      </main>
+      @@include('html/footer.html')
+    </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>

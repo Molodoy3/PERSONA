@@ -2,173 +2,205 @@
 <html lang="ru">
   @@include('html/head.html', { 'title': 'Главная' })
   <body>
-    < class="wrapper"> @@include('html/header.html')
-    <main class="page">
-      <div class="cabinet">
-        <div class="cabinet__container">
-          @@include('html/menu.html')
-          <section class="cabinet__content">
-            <div class="orders">
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <div class="cabinet">
+          <div class="cabinet__container">
+            @@include('html/menu.html')
+            <section class="cabinet__content">
+              <div class="orders">
                 <h1 class="orders__title title">Заказы</h1>
                 <div class="orders__items">
-                    <div class="orders__item">
-                        <div class="orders__image item__image">
-                            <picture>
-                                <source
-                                  srcset="@img/categories/01.webp"
-                                  type="image/webp"
-                                />
-                                <img src="@img/categories/01.png" alt="картинка продукта" />
-                              </picture>
-                        </div>
-                        <div class="orders__content">
-                            <div class="orders__top">
-                                <div class="orders__brend">
-                                    <img src='@img/brends/LOGO.svg' alt='logo'>
-                                </div>
-                                <div class="orders__numb">#232131</div>
-                            </div>
-                            <div class="orders__text"><a href="">Шерстяные брюки, Серый</a></div>
-                            <div class="orders__bottom">
-                                <div class="orders__date">01.01.2021</div>
-                                <div class="orders__status">В пути</div>
-                                <div class="orders__price">15.000₽</div>
-                            </div>
-                        </div>
+                  <div class="orders__item">
+                    <div class="orders__image item__image">
+                      <picture>
+                        <source
+                          srcset="@img/categories/01.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="@img/categories/01.png"
+                          alt="картинка продукта"
+                        />
+                      </picture>
                     </div>
-                    <div class="orders__item">
-                        <div class="orders__image item__image">
-                            <picture>
-                                <source
-                                  srcset="@img/categories/01.webp"
-                                  type="image/webp"
-                                />
-                                <img src="@img/categories/01.png" alt="картинка продукта" />
-                              </picture>
+                    <div class="orders__content">
+                      <div class="orders__top">
+                        <div class="orders__brend">
+                          <img src="@img/brends/LOGO.svg" alt="logo" />
                         </div>
-                        <div class="orders__content">
-                            <div class="orders__top">
-                                <div class="orders__brend">
-                                    <img src='@img/brends/LOGO.svg' alt='logo'>
-                                </div>
-                                <div class="orders__numb">#232131</div>
-                            </div>
-                            <div class="orders__text"><a href="">Шерстяные брюки, Серый</a></div>
-                            <div class="orders__bottom">
-                                <div class="orders__date">01.01.2021</div>
-                                <div class="orders__status">В пути</div>
-                                <div class="orders__price">15.000₽</div>
-                            </div>
-                        </div>
+                        <div class="orders__numb">#232131</div>
+                      </div>
+                      <div class="orders__text">
+                        <a href="">Шерстяные брюки, Серый</a>
+                      </div>
+                      <div class="orders__bottom">
+                        <div class="orders__date">01.01.2021</div>
+                        <div class="orders__status">В пути</div>
+                        <div class="orders__price">15.000₽</div>
+                      </div>
                     </div>
-                    <div class="orders__item">
-                        <div class="orders__image item__image">
-                            <picture>
-                                <source
-                                  srcset="@img/categories/01.webp"
-                                  type="image/webp"
-                                />
-                                <img src="@img/categories/01.png" alt="картинка продукта" />
-                              </picture>
-                        </div>
-                        <div class="orders__content">
-                            <div class="orders__top">
-                                <div class="orders__brend">
-                                    <img src='@img/brends/LOGO.svg' alt='logo'>
-                                </div>
-                                <div class="orders__numb">#232131</div>
-                            </div>
-                            <div class="orders__text"><a href="">Шерстяные брюки, Серый</a></div>
-                            <div class="orders__bottom">
-                                <div class="orders__date">01.01.2021</div>
-                                <div class="orders__status">В пути</div>
-                                <div class="orders__price">15.000₽</div>
-                            </div>
-                        </div>
+                  </div>
+                  <div class="orders__item">
+                    <div class="orders__image item__image">
+                      <picture>
+                        <source
+                          srcset="@img/categories/01.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="@img/categories/01.png"
+                          alt="картинка продукта"
+                        />
+                      </picture>
                     </div>
-                    <div class="orders__item">
-                        <div class="orders__image item__image">
-                            <picture>
-                                <source
-                                  srcset="@img/categories/01.webp"
-                                  type="image/webp"
-                                />
-                                <img src="@img/categories/01.png" alt="картинка продукта" />
-                              </picture>
+                    <div class="orders__content">
+                      <div class="orders__top">
+                        <div class="orders__brend">
+                          <img src="@img/brends/LOGO.svg" alt="logo" />
                         </div>
-                        <div class="orders__content">
-                            <div class="orders__top">
-                                <div class="orders__brend">
-                                    <img src='@img/brends/LOGO.svg' alt='logo'>
-                                </div>
-                                <div class="orders__numb">#232131</div>
-                            </div>
-                            <div class="orders__text"><a href="">Шерстяные брюки, Серый</a></div>
-                            <div class="orders__bottom">
-                                <div class="orders__date">01.01.2021</div>
-                                <div class="orders__status">В пути</div>
-                                <div class="orders__price">15.000₽</div>
-                            </div>
-                        </div>
+                        <div class="orders__numb">#232131</div>
+                      </div>
+                      <div class="orders__text">
+                        <a href="">Шерстяные брюки, Серый</a>
+                      </div>
+                      <div class="orders__bottom">
+                        <div class="orders__date">01.01.2021</div>
+                        <div class="orders__status">В пути</div>
+                        <div class="orders__price">15.000₽</div>
+                      </div>
                     </div>
-                    <div class="orders__item">
-                        <div class="orders__image item__image">
-                            <picture>
-                                <source
-                                  srcset="@img/categories/01.webp"
-                                  type="image/webp"
-                                />
-                                <img src="@img/categories/01.png" alt="картинка продукта" />
-                              </picture>
-                        </div>
-                        <div class="orders__content">
-                            <div class="orders__top">
-                                <div class="orders__brend">
-                                    <img src='@img/brends/LOGO.svg' alt='logo'>
-                                </div>
-                                <div class="orders__numb">#232131</div>
-                            </div>
-                            <div class="orders__text"><a href="">Шерстяные брюки, Серый</a></div>
-                            <div class="orders__bottom">
-                                <div class="orders__date">01.01.2021</div>
-                                <div class="orders__status">В пути</div>
-                                <div class="orders__price">15.000₽</div>
-                            </div>
-                        </div>
+                  </div>
+                  <div class="orders__item">
+                    <div class="orders__image item__image">
+                      <picture>
+                        <source
+                          srcset="@img/categories/01.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="@img/categories/01.png"
+                          alt="картинка продукта"
+                        />
+                      </picture>
                     </div>
-                    <div class="orders__item">
-                        <div class="orders__image item__image">
-                            <picture>
-                                <source
-                                  srcset="@img/categories/01.webp"
-                                  type="image/webp"
-                                />
-                                <img src="@img/categories/01.png" alt="картинка продукта" />
-                              </picture>
+                    <div class="orders__content">
+                      <div class="orders__top">
+                        <div class="orders__brend">
+                          <img src="@img/brends/LOGO.svg" alt="logo" />
                         </div>
-                        <div class="orders__content">
-                            <div class="orders__top">
-                                <div class="orders__brend">
-                                    <img src='@img/brends/LOGO.svg' alt='logo'>
-                                </div>
-                                <div class="orders__numb">#232131</div>
-                            </div>
-                            <div class="orders__text"><a href="">Шерстяные брюки, Серый</a></div>
-                            <div class="orders__bottom">
-                                <div class="orders__date">01.01.2021</div>
-                                <div class="orders__status">В пути</div>
-                                <div class="orders__price">15.000₽</div>
-                            </div>
-                        </div>
+                        <div class="orders__numb">#232131</div>
+                      </div>
+                      <div class="orders__text">
+                        <a href="">Шерстяные брюки, Серый</a>
+                      </div>
+                      <div class="orders__bottom">
+                        <div class="orders__date">01.01.2021</div>
+                        <div class="orders__status">В пути</div>
+                        <div class="orders__price">15.000₽</div>
+                      </div>
                     </div>
+                  </div>
+                  <div class="orders__item">
+                    <div class="orders__image item__image">
+                      <picture>
+                        <source
+                          srcset="@img/categories/01.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="@img/categories/01.png"
+                          alt="картинка продукта"
+                        />
+                      </picture>
+                    </div>
+                    <div class="orders__content">
+                      <div class="orders__top">
+                        <div class="orders__brend">
+                          <img src="@img/brends/LOGO.svg" alt="logo" />
+                        </div>
+                        <div class="orders__numb">#232131</div>
+                      </div>
+                      <div class="orders__text">
+                        <a href="">Шерстяные брюки, Серый</a>
+                      </div>
+                      <div class="orders__bottom">
+                        <div class="orders__date">01.01.2021</div>
+                        <div class="orders__status">В пути</div>
+                        <div class="orders__price">15.000₽</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="orders__item">
+                    <div class="orders__image item__image">
+                      <picture>
+                        <source
+                          srcset="@img/categories/01.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="@img/categories/01.png"
+                          alt="картинка продукта"
+                        />
+                      </picture>
+                    </div>
+                    <div class="orders__content">
+                      <div class="orders__top">
+                        <div class="orders__brend">
+                          <img src="@img/brends/LOGO.svg" alt="logo" />
+                        </div>
+                        <div class="orders__numb">#232131</div>
+                      </div>
+                      <div class="orders__text">
+                        <a href="">Шерстяные брюки, Серый</a>
+                      </div>
+                      <div class="orders__bottom">
+                        <div class="orders__date">01.01.2021</div>
+                        <div class="orders__status">В пути</div>
+                        <div class="orders__price">15.000₽</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="orders__item">
+                    <div class="orders__image item__image">
+                      <picture>
+                        <source
+                          srcset="@img/categories/01.webp"
+                          type="image/webp"
+                        />
+                        <img
+                          src="@img/categories/01.png"
+                          alt="картинка продукта"
+                        />
+                      </picture>
+                    </div>
+                    <div class="orders__content">
+                      <div class="orders__top">
+                        <div class="orders__brend">
+                          <img src="@img/brends/LOGO.svg" alt="logo" />
+                        </div>
+                        <div class="orders__numb">#232131</div>
+                      </div>
+                      <div class="orders__text">
+                        <a href="">Шерстяные брюки, Серый</a>
+                      </div>
+                      <div class="orders__bottom">
+                        <div class="orders__date">01.01.2021</div>
+                        <div class="orders__status">В пути</div>
+                        <div class="orders__price">15.000₽</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-          </section>
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
-      @@include('html/contacts.html')
-    </main>
-    @@include('html/footer.html')
+        @@include('html/contacts.html')
+      </main>
+      @@include('html/footer.html')
+    </div>
     <script src="js/app.min.js"></script>
   </body>
 </html>
