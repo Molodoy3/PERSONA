@@ -31,6 +31,21 @@ export function delegationClick() {
             }
         }
 
+        //закрывание размеров на карточке товара на странице избранное
+        if (targetElement.closest('.sizes-item__close')) {
+            const wrap = targetElement.closest('[data-close]');
+            if (wrap) {
+                e.preventDefault()
+                wrap.style.display = 'none';
+            }
+        }
+
+        //для буков в брендах 
+        if (targetElement.closest('.button-alphabet')) {
+            const letter = targetElement.closest('.button-alphabet').innerText;
+            document.querySelector('#searchInput').value += letter;
+        }
+
         //?Плавный скрол между якорями (работает вообще на все ссылки)
         /*         //?Плавный скрол между якорями (работает вообще на все ссылки)
         if (targetElement.closest('a')) {

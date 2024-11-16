@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body>
+    < class="wrapper"> @@include('html/header.html')
+    <main class="page">
+      <div class="cabinet">
+        <div class="cabinet__container">
+          @@include('html/menu.html')
+          <section class="cabinet__content">
+            <div class="card">
+                <h1 class="card__title title">Карта лояльности</h1>
+                <div class="card__body">
+                    <div class="card__top">
+                        <h2 class="card__sub-title">Ваша карта</h2>
+                        <div class="card__nomer">0000 0000 0000 0000</div>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__image">
+                            <picture>
+                                <source
+                                  srcset="@img/gift-card/01.webp"
+                                  type="image/webp"
+                                />
+                                <img
+                                  src="@img/gift-card/01.png"
+                                  alt="картинка подарочной карты"
+                                />
+                              </picture>
+                        </div>
+                        <div class="card__info-bonus">
+                            <div class="card__price-bonus">15.000₽</div>
+                            <div class="card__text">Доступные бонусы</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      @@include('html/contacts.html')
+    </main>
+    @@include('html/footer.html')
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

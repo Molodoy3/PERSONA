@@ -185,7 +185,7 @@
             z-index: -1;
             
             &.open {
-                z-index: 5;
+                z-index: 50;
                 left: 0;
                 opacity: 1;
                 &::after {

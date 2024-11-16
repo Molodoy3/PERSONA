@@ -38,6 +38,9 @@ export function useDynamicAdapt(type = 'max') {
     const mediaHandler = getMediaHandler(matchMedia, filteredDNodes)
     matchMedia.addEventListener('change', mediaHandler)
 
+    // Проверка на data-da-adaptiv
+
+
     mediaHandler()
   })
 
@@ -86,6 +89,9 @@ export function useDynamicAdapt(type = 'max') {
    */
   function getMediaHandler(matchMedia, items) {
     return function mediaHandler() {
+      if (window.innerWidth < 600) {
+        return; // Если ширина экрана больше 600px, выходим из функции
+      }
       if (matchMedia.matches) {
         items.forEach((item) => {
           moveTo(item)

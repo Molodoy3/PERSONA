@@ -551,77 +551,7 @@
             </div>
           </div>
         </section>
-        <section class="contacts">
-          <div class="contacts__container">
-            <div class="contacts__col">
-              <h5 class="contacts__title-help title">Нужна помощь с заказом</h5>
-              <ul class="contacts__list">
-                <li>
-                  <a href="tel:+78007707717">
-                    <img src="@img/icons/tel.svg" alt="телефон" />
-                    8 800 770 7717
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:persona@personashop.com">
-                    <img src="@img/icons/mail.svg" alt="почта" />
-                    persona@personashop.com
-                  </a>
-                </li>
-                <li>
-                  <img src="@img/icons/clock.svg" alt="часы" />
-                  09:00-21:00
-                </li>
-              </ul>
-            </div>
-            <div class="contacts__col">
-              <h5 class="contacts__title-notices title">
-                Подписаться на уведомления
-              </h5>
-              <form name="notices" action="#" class="contacts__form">
-                <div class="contacts__form-cols">
-                  <input
-                    placeholder="Введите ваш e-mail"
-                    name="email"
-                    type="text"
-                    class="contacts__input input"
-                  />
-                  <button class="contacts__button button" type="submit">
-                    Подписаться
-                  </button>
-                </div>
-                <div class="contacts__gender">
-                  <label
-                    class="contacts__radio-item radio-item"
-                    class=""
-                    for="man"
-                  >
-                    <input
-                      name="gender"
-                      value="man"
-                      id="man"
-                      type="radio"
-                      class="radio contacts__radio"
-                    />
-                    <span class="radio-checkmark"></span>
-                    Мужские
-                  </label>
-                  <label class="contacts__radio-item radio-item">
-                    <input
-                      name="gender"
-                      value="woman"
-                      id="woman"
-                      type="radio"
-                      class="radio contacts__radio"
-                    />
-                    <span class="radio-checkmark"></span>
-                    Женские
-                  </label>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
+        @@include('html/contacts.html')
       </div>
       @@include('html/footer.html')
     </div>

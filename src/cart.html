@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <div class="page">
+        <section class="cart">
+          <div class="cart__container">
+            <div class="cart__items">
+              <div class="cart__item">
+                <div class="cart__image">
+                  <picture>
+                    <source
+                      srcset="@img/categories/01.webp"
+                      type="image/webp"
+                    />
+                    <img src="@img/categories/01.png" alt="картинка продукта" />
+                  </picture>
+                </div>
+                <div class="cart__info-item">
+                  <div class="cart__brend">
+                    <img src='@img/brends/LOGO.svg' alt='бернд'>
+                  </div>
+                  <h4 class="cart__text"><a href="">Шерстяные брюки, Серый</a></h4>
+                  <div class="cart__total"><span>Осталось:</span> 15 штук</div>
+                  <div class="cart__size">40 <img src='@img/icons/arrow.svg' alt='стрелочка'></div>
+                </div>
+                <div class="cart__col">
+                  <div class="cart__icons">
+                    <img src='@img/icons/tick.svg' alt='галочка'>
+                    <button type="button"><img src='@img/icons/star.svg' alt='звездочка'></button>
+                    <button type="button"><img src='@img/icons/close.svg' alt='крестик'></button>
+                  </div>
+                  <div class="cart__price">15.000₽</div>
+                  <div class="cart__quantity">
+                    <button type="button" data-minus>-</button>
+                    <input type="text" readonly value="1" name="quantity">
+                    <button type="button" data-plus>+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="cart__item cart__item_none">
+                <div class="cart__image">
+                  <picture>
+                    <source
+                      srcset="@img/categories/01.webp"
+                      type="image/webp"
+                    />
+                    <img src="@img/categories/01.png" alt="картинка продукта" />
+                  </picture>
+                </div>
+                <div class="cart__info-item">
+                  <div class="cart__brend">
+                    <img src='@img/brends/LOGO.svg' alt='бернд'>
+                  </div>
+                  <h4 class="cart__text"><a href="">Шерстяные брюки, Серый</a></h4>
+                  <div class="cart__total"><span>Осталось:</span> 15 штук</div>
+                  <div class="cart__size">40 <img src='@img/icons/arrow.svg' alt='стрелочка'></div>
+                </div>
+                <div class="cart__col">
+                  <div class="cart__icons">
+                    <img src='@img/icons/tick.svg' alt='галочка'>
+                    <button type="button"><img src='@img/icons/star.svg' alt='звездочка'></button>
+                    <button type="button"><img src='@img/icons/close.svg' alt='крестик'></button>
+                  </div>
+                  <div class="cart__price">15.000₽</div>
+                  <div class="cart__quantity">
+                    <button type="button" data-minus>-</button>
+                    <input type="text" readonly value="1" name="quantity">
+                    <button type="button" data-plus>+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="cart__item">
+                <div class="cart__image">
+                  <picture>
+                    <source
+                      srcset="@img/categories/01.webp"
+                      type="image/webp"
+                    />
+                    <img src="@img/categories/01.png" alt="картинка продукта" />
+                  </picture>
+                </div>
+                <div class="cart__info-item">
+                  <div class="cart__brend">
+                    <img src='@img/brends/LOGO.svg' alt='бернд'>
+                  </div>
+                  <h4 class="cart__text"><a href="">Шерстяные брюки, Серый</a></h4>
+                  <div class="cart__total"><span>Осталось:</span> 15 штук</div>
+                  <div class="cart__size">40 <img src='@img/icons/arrow.svg' alt='стрелочка'></div>
+                </div>
+                <div class="cart__col">
+                  <div class="cart__icons">
+                    <img src='@img/icons/tick.svg' alt='галочка'>
+                    <button type="button"><img src='@img/icons/star.svg' alt='звездочка'></button>
+                    <button type="button"><img src='@img/icons/close.svg' alt='крестик'></button>
+                  </div>
+                  <div class="cart__price">15.000₽</div>
+                  <div class="cart__quantity">
+                    <button type="button" data-minus>-</button>
+                    <input type="text" readonly value="1" name="quantity">
+                    <button type="button" data-plus>+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart__order">
+              <h1 class="cart__title">Оформления заказа</h1>
+              <ul class="cart__list">
+                <li>
+                  <span>Шерстяные брюки, Серый</span>
+                  <span>15.000₽</span>
+                </li>
+                <li>
+                  <span>Шерстяные брюки, Серый</span>
+                  <span>15.000₽</span>
+                </li>
+                <li>
+                  <span>Шерстяные брюки, Серый</span>
+                  <span>15.000₽</span>
+                </li>
+              </ul>
+              <div class="cart__total-price">45.000</div>
+              <button type="button" class="cart__promocode button button_border">Добавить промокод</button>
+              <a href="" class="cart__all-button button">Купить все товары</a>
+            </div>
+          </div>
+        </section>
+        @@include('html/contacts.html')
+      </div>
+      @@include('html/footer.html')
+    </div>
+    <script>
+      document.addEventListener('click', (e) =>{
+        if (e.target.closest('[data-minus]')) {
+          if (e.target.closest('div').querySelector('input').value > 1)
+            e.target.closest('div').querySelector('input').value -= 1;
+        }
+        if (e.target.closest('[data-plus]')) {
+          const input = e.target.closest('div').querySelector('input');
+          input.value = Number(input.value) + 1;
+        }
+      })
+    </script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

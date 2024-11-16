@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20241112214742" />
+  <link rel="stylesheet" href="css/style.min.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300..700&family=Montserrat:wght@100..900&display=swap&_v=20241112214742"
+    href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300..700&family=Montserrat:wght@100..900&display=swap"
     rel="stylesheet"
   />
 </head>
@@ -35,7 +35,7 @@
             <div class="header__links">
                 <ul class="header__icons">
                     <li><a href=""><img src='img/icons/search.svg' alt='поиск'></a></li>
-                    <li><a href=""><img src='img/icons/star.svg' alt='избранное'></a></li>
+                    <li><a href="favorites.html"><img src='img/icons/star.svg' alt='избранное'></a></li>
                     <li><a href="">
                         <img src='img/icons/bag.svg' alt='корзина'>
                         <div class="header__quantity">3</div>
@@ -365,76 +365,51 @@
           </div>
         </section>
         <section class="contacts">
-          <div class="contacts__container">
-            <div class="contacts__col">
-              <h5 class="contacts__title-help title">Нужна помощь с заказом</h5>
-              <ul class="contacts__list">
-                <li>
-                  <a href="tel:+78007707717">
-                    <img src="img/icons/tel.svg" alt="телефон" />
-                    8 800 770 7717
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:persona@personashop.com">
-                    <img src="img/icons/mail.svg" alt="почта" />
-                    persona@personashop.com
-                  </a>
-                </li>
-                <li>
-                  <img src="img/icons/clock.svg" alt="часы" />
-                  09:00-21:00
-                </li>
-              </ul>
+    <div class='contacts__container'>
+        <div class="contacts__col">
+          <h5 class="contacts__title-help title">Нужна помощь с заказом</h5>
+          <ul class="contacts__list">
+            <li>
+              <a href="tel:+78007707717">
+                <img src='img/icons/tel.svg' alt='телефон'>
+                8 800 770 7717
+              </a>
+            </li>
+            <li>
+              <a href="mailto:persona@personashop.com">
+                <img src='img/icons/mail.svg' alt='почта'>
+                persona@personashop.com
+              </a>
+            </li>
+            <li>
+                <img src='img/icons/clock.svg' alt='часы'>
+                09:00-21:00
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__col">
+          <h5 class="contacts__title-notices title">Подписаться на уведомления</h5>
+          <form name="notices" action="#" class="contacts__form">
+            <div class="contacts__form-cols">
+              <input placeholder="Введите ваш e-mail" name="email" type="text" class="contacts__input input"></input>
+              <button class="contacts__button button" type="submit">Подписаться</button>
             </div>
-            <div class="contacts__col">
-              <h5 class="contacts__title-notices title">
-                Подписаться на уведомления
-              </h5>
-              <form name="notices" action="#" class="contacts__form">
-                <div class="contacts__form-cols">
-                  <input
-                    placeholder="Введите ваш e-mail"
-                    name="email"
-                    type="text"
-                    class="contacts__input input"
-                  />
-                  <button class="contacts__button button" type="submit">
-                    Подписаться
-                  </button>
-                </div>
-                <div class="contacts__gender">
-                  <label
-                    class="contacts__radio-item radio-item"
-                    class=""
-                    for="man"
-                  >
-                    <input
-                      name="gender"
-                      value="man"
-                      id="man"
-                      type="radio"
-                      class="radio contacts__radio"
-                    />
-                    <span class="radio-checkmark"></span>
-                    Мужские
-                  </label>
-                  <label class="contacts__radio-item radio-item">
-                    <input
-                      name="gender"
-                      value="woman"
-                      id="woman"
-                      type="radio"
-                      class="radio contacts__radio"
-                    />
-                    <span class="radio-checkmark"></span>
-                    Женские
-                  </label>
-                </div>
-              </form>
+            <div class="contacts__gender">
+              <label class="contacts__radio-item radio-item" class="" for="man">
+                <input name="gender" value="man" id="man" type="radio" class="radio contacts__radio">
+                <span class="radio-checkmark"></span>
+                Мужские
+              </label>
+              <label class="contacts__radio-item radio-item">
+                <input name="gender" value="woman" id="woman" type="radio" class="radio contacts__radio">
+                <span class="radio-checkmark"></span>
+                Женские
+              </label>
             </div>
-          </div>
-        </section>
+          </form>
+        </div>
+    </div>
+  </section>
       </div>
       <footer class="footer">
     <div class='footer__container'>
@@ -476,6 +451,6 @@
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20241112214742"></script>
+    <script src="js/app.min.js"></script>
   </body>
 </html>

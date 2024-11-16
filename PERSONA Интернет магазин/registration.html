@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300..700&family=Montserrat:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+    <div class='header__container'>
+        <div class="header__main">
+            <div data-da = ".header__menu,730,first" class="header__gender">
+                <a href="" class="header__button button">Женщины</a>
+                <a href="" class="header__button button button_border">Мужчины</a>
+            </div>
+            <div href="/" class="header__logo">
+                <a href="/">
+                    <picture>
+                        <source srcset='img/logo.webp' type='image/webp'>
+                        <img src='img/logo.png' alt='логотип'>
+                    </picture>
+                </a>
+            </div>
+            <div class="header__links">
+                <ul class="header__icons">
+                    <li><a href=""><img src='img/icons/search.svg' alt='поиск'></a></li>
+                    <li><a href="favorites.html"><img src='img/icons/star.svg' alt='избранное'></a></li>
+                    <li><a href="">
+                        <img src='img/icons/bag.svg' alt='корзина'>
+                        <div class="header__quantity">3</div>
+                    </a></li>
+                    <li class="header__profile-icon"><a href=""><img src='img/icons/profile.svg' alt='профиль'></a></li>
+                </ul>
+                <a href="" class="header__profile button button_border">Личный кабинет</a>
+            </div>
+            <div class='menu__icon'>
+                <span></span>
+            </div>
+        </div>
+        <div class='header__menu menu'>
+            <nav class='menu__body'>
+                <ul class='menu__list'>
+                    <li><a href='' class='menu__link'>Новинки</a></li> 
+                    <li><a href='' class='menu__link'>Бренды</a></li> 
+                    <li><a href='' class='menu__link'>Одежда</a></li> 
+                    <li><a href='' class='menu__link'>Обувь</a></li> 
+                    <li><a href='' class='menu__link'>Сумки</a></li> 
+                    <li><a href='' class='menu__link'>Аксессуары</a></li> 
+                    <li><a href='' class='menu__link'>Новости</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="page">
+        <div class="auth">
+            <div data-tabs class='auth__container'>
+                <div class="product-info__mobile-filters">
+                    <button
+                        type="button"
+                        data-filter="1"
+                        class="product-info__filter active"
+                    >
+                    Регестрация
+                    </button>
+                    <button
+                        type="button"
+                        data-filter="2"
+                        class="product-info__filter"
+                    >
+                    Вход
+                    </button>
+                </div>
+                <section data-filter-item="1">
+                    <h1 class="auth__title title">Регистрация</h1>
+                    <form action="#" class="auth__body">
+                        <h2 class="auth__sub-title">Создание аккаунта</h2>
+                        <div class="auth__item">
+                            <label for="tel">Ваш номер телефона</label>
+                            <input id="tel" placeholder="Введите ваш номер телефона" type="text" class="input">
+                        </div>
+                        <div class="auth__item">
+                            <label for="code">Подтверждение номера телефона</label>
+                            <input id="code" placeholder="Введите еод из SMS" type="text" class="input">
+                        </div>
+                        <button class="button" type="button">Создать</button>
+                    </form>
+                </section>
+                <section class="hidden" data-filter-item="2">
+                    <h1 class="auth__title title">Вход</h1>
+                    <form action="#" class="auth__body">
+                        <h2 class="auth__sub-title">войти в аккаунт</h2>
+                        <div class="auth__item">
+                            <label for="tel">Ваш номер телефона</label>
+                            <input id="tel" placeholder="Введите ваш номер телефона" type="text" class="input">
+                        </div>
+                        <div class="auth__item">
+                            <label for="code">Подтверждение номера телефона</label>
+                            <input id="code" placeholder="Введите еод из SMS" type="text" class="input">
+                        </div>
+                        <button class="button" type="button">Войти</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <section class="contacts">
+    <div class='contacts__container'>
+        <div class="contacts__col">
+          <h5 class="contacts__title-help title">Нужна помощь с заказом</h5>
+          <ul class="contacts__list">
+            <li>
+              <a href="tel:+78007707717">
+                <img src='img/icons/tel.svg' alt='телефон'>
+                8 800 770 7717
+              </a>
+            </li>
+            <li>
+              <a href="mailto:persona@personashop.com">
+                <img src='img/icons/mail.svg' alt='почта'>
+                persona@personashop.com
+              </a>
+            </li>
+            <li>
+                <img src='img/icons/clock.svg' alt='часы'>
+                09:00-21:00
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__col">
+          <h5 class="contacts__title-notices title">Подписаться на уведомления</h5>
+          <form name="notices" action="#" class="contacts__form">
+            <div class="contacts__form-cols">
+              <input placeholder="Введите ваш e-mail" name="email" type="text" class="contacts__input input"></input>
+              <button class="contacts__button button" type="submit">Подписаться</button>
+            </div>
+            <div class="contacts__gender">
+              <label class="contacts__radio-item radio-item" class="" for="man">
+                <input name="gender" value="man" id="man" type="radio" class="radio contacts__radio">
+                <span class="radio-checkmark"></span>
+                Мужские
+              </label>
+              <label class="contacts__radio-item radio-item">
+                <input name="gender" value="woman" id="woman" type="radio" class="radio contacts__radio">
+                <span class="radio-checkmark"></span>
+                Женские
+              </label>
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
+      </div>
+      <footer class="footer">
+    <div class='footer__container'>
+        <div class="footer__col">
+            <h5 class="footer__title">О магазине</h5>
+            <ul class="footer__list">
+                <li><a href="">О магазине</a></li>
+                <li><a href="">Контакты</a></li>
+                <li><a href="">Наша история</a></li>
+                <li><a href="">Карьера</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h5 class="footer__title">Онлайн покупки</h5>
+            <ul class="footer__list">
+                <li><a href="">Мобильное приложение</a></li>
+                <li><a href="">Оплата</a></li>
+                <li><a href="">Доставка</a></li>
+                <li><a href="">Обмен и возврат</a></li>
+                <li><a href="">Условия продажи</a></li>
+                <li><a href="">Скидка на первый заказ</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h5 class="footer__title">Услуги</h5>
+            <ul class="footer__list">
+                <li><a href="">Шопинг-сервисы</a></li>
+                <li><a href="">Подарочная карта</a></li>
+                <li><a href="">Подарочная упаковка</a></li>
+                <li><a href="">Карта лояльности</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h5 class="footer__title">Новости</h5>
+            <ul class="footer__list">
+                <li><a href="">Новости и события</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

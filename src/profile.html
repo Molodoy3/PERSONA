@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <div class="cabinet">
+          <div class="cabinet__container">
+            @@include('html/menu.html')
+            <section class="cabinet__content">
+                <div class="profile">
+                    <h1 class="profile__title title">профиль</h1>
+                    <div class="profile__items">
+                        <div class="profile__item">
+                            <h2 class="profile__sub-title">Активные заказы</h2>
+                            <div class="profile__orders">
+                                <div class="profile__order">
+                                    <div class="profile__image">
+                                        <picture>
+                                            <source
+                                              srcset="@img/categories/01.webp"
+                                              type="image/webp"
+                                            />
+                                            <img src="@img/categories/01.png" alt="картинка продукта" />
+                                          </picture>
+                                    </div>
+                                    <div class="profile__info-product">
+                                        <div class="profile__brend">
+                                            <img src='@img/brends/Брюки.svg' alt='Брюки'>
+                                        </div>
+                                        <h4 class="profile__title-order"><a href="">Название брюк</a></h4>
+                                        <div class="profile__price">15.000₽</div>
+                                    </div>
+                                </div>
+                                <div class="profile__order">
+                                    <div class="profile__image">
+                                        <picture>
+                                            <source
+                                              srcset="@img/categories/01.webp"
+                                              type="image/webp"
+                                            />
+                                            <img src="@img/categories/01.png" alt="картинка продукта" />
+                                          </picture>
+                                    </div>
+                                    <div class="profile__info-product">
+                                        <div class="profile__brend">
+                                            <img src='@img/brends/Брюки.svg' alt='Брюки'>
+                                        </div>
+                                        <h4 class="profile__title-order"><a href="">Название брюк</a></h4>
+                                        <div class="profile__price">15.000₽</div>
+                                    </div>
+                                </div>
+                                <div class="profile__order">
+                                    <div class="profile__image">
+                                        <picture>
+                                            <source
+                                              srcset="@img/categories/01.webp"
+                                              type="image/webp"
+                                            />
+                                            <img src="@img/categories/01.png" alt="картинка продукта" />
+                                          </picture>
+                                    </div>
+                                    <div class="profile__info-product">
+                                        <div class="profile__brend">
+                                            <img src='@img/brends/Брюки.svg' alt='Брюки'>
+                                        </div>
+                                        <h4 class="profile__title-order"><a href="">Название брюк</a></h4>
+                                        <div class="profile__price">15.000₽</div>
+                                    </div>
+                                </div>
+                                <div class="profile__order">
+                                    <div class="profile__image">
+                                        <picture>
+                                            <source
+                                              srcset="@img/categories/01.webp"
+                                              type="image/webp"
+                                            />
+                                            <img src="@img/categories/01.png" alt="картинка продукта" />
+                                          </picture>
+                                    </div>
+                                    <div class="profile__info-product">
+                                        <div class="profile__brend">
+                                            <img src='@img/brends/Брюки.svg' alt='Брюки'>
+                                        </div>
+                                        <h4 class="profile__title-order"><a href="">Название брюк</a></h4>
+                                        <div class="profile__price">15.000₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__item">
+                            <h2 class="profile__sub-title">Бонусы</h2>
+                            <div class="profile__bonus">
+                                <div class="profile__image-bonus">
+                                    <picture>
+                                        <source
+                                          srcset="@img/gift-card/01.webp"
+                                          type="image/webp"
+                                        />
+                                        <img
+                                          src="@img/gift-card/01.png"
+                                          alt="картинка подарочной карты"
+                                        />
+                                      </picture>
+                                </div>
+                                <div class="profile__info-bonus">
+                                    <div class="profile__price-bonus">15.000₽</div>
+                                    <div class="profile__text">Доступные бонусы</div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </section>
+          </div>
+        </div>
+        @@include('html/contacts.html')
+      </main>
+      @@include('html/footer.html')
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <div class="page">
+        <div class="auth">
+            <div data-tabs class='auth__container'>
+                <div class="product-info__mobile-filters">
+                    <button
+                        type="button"
+                        data-filter="1"
+                        class="product-info__filter active"
+                    >
+                    Регестрация
+                    </button>
+                    <button
+                        type="button"
+                        data-filter="2"
+                        class="product-info__filter"
+                    >
+                    Вход
+                    </button>
+                </div>
+                <section data-filter-item="1">
+                    <h1 class="auth__title title">Регистрация</h1>
+                    <form action="#" class="auth__body">
+                        <h2 class="auth__sub-title">Создание аккаунта</h2>
+                        <div class="auth__item">
+                            <label for="tel">Ваш номер телефона</label>
+                            <input id="tel" placeholder="Введите ваш номер телефона" type="text" class="input">
+                        </div>
+                        <div class="auth__item">
+                            <label for="code">Подтверждение номера телефона</label>
+                            <input id="code" placeholder="Введите еод из SMS" type="text" class="input">
+                        </div>
+                        <button class="button" type="button">Создать</button>
+                    </form>
+                </section>
+                <section class="hidden" data-filter-item="2">
+                    <h1 class="auth__title title">Вход</h1>
+                    <form action="#" class="auth__body">
+                        <h2 class="auth__sub-title">войти в аккаунт</h2>
+                        <div class="auth__item">
+                            <label for="tel">Ваш номер телефона</label>
+                            <input id="tel" placeholder="Введите ваш номер телефона" type="text" class="input">
+                        </div>
+                        <div class="auth__item">
+                            <label for="code">Подтверждение номера телефона</label>
+                            <input id="code" placeholder="Введите еод из SMS" type="text" class="input">
+                        </div>
+                        <button class="button" type="button">Войти</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+        @@include('html/contacts.html')
+      </div>
+      @@include('html/footer.html')
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

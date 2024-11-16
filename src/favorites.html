@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <section class="favorites catalog">
+          <div class="favorites__container">
+            <h1 class="favorites__title title">Избранное</h1>
+            <div class="catalog__row items-row">
+              <div class="popular__item item">
+                <div class="item__image">
+                  <picture>
+                    <source
+                      srcset="@img/categories/01.webp"
+                      type="image/webp"
+                    />
+                    <img src="@img/categories/01.png" alt="картинка" />
+                  </picture>
+                  <button class="item__star item__star_active">
+                    <img src="@img/icons/star.svg" alt="звезда" />
+                    <img
+                      class="item__star-active-image"
+                      src="@img/icons/star-blue.svg"
+                      alt="звезда"
+                    />
+                  </button>
+                </div>
+                <div class="item__brand">LOGO</div>
+                <div class="item__title">Кеды</div>
+                <div class="item__price">15.000₽</div>
+                <a href="" class="button item__cart-button">В корзину</a>
+                <div data-close class="item__sizes sizes-item">
+                  <div class="sizes-item__top">
+                    <a href="" class="sizes-item__close">
+                      <img src="@img/icons/close.svg" alt="крстик" />
+                    </a>
+                    <h6 class="sizes-item__title">РАЗМЕР (INT / RU)</h6>
+                  </div>
+                  <div class="sizes-item__items">
+                    <div
+                      class="sizes-item__item sizes-item__item_none product__size-item"
+                    >
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div
+                      class="sizes-item__item sizes-item__item_active product__size-item"
+                    >
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                    <div class="sizes-item__item product__size-item">
+                      <span class="product__min">38</span>
+                      <span class="product__max">40</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popular__item item">
+                <div class="item__image">
+                  <picture>
+                    <source
+                      srcset="@img/categories/01.webp"
+                      type="image/webp"
+                    />
+                    <img src="@img/categories/01.png" alt="картинка" />
+                  </picture>
+                  <button class="item__star item__star_active">
+                    <img src="@img/icons/star.svg" alt="звезда" />
+                    <img
+                      class="item__star-active-image"
+                      src="@img/icons/star-blue.svg"
+                      alt="звезда"
+                    />
+                  </button>
+                </div>
+                <div class="item__brand">LOGO</div>
+                <div class="item__title">Кеды</div>
+                <div class="item__price">15.000₽</div>
+                <a href="" class="button item__cart-button">В корзину</a>
+              </div>
+              <div class="popular__item item">
+                <div class="item__image">
+                  <picture>
+                    <source
+                      srcset="@img/categories/01.webp"
+                      type="image/webp"
+                    />
+                    <img src="@img/categories/01.png" alt="картинка" />
+                  </picture>
+                  <button class="item__star item__star_active">
+                    <img src="@img/icons/star.svg" alt="звезда" />
+                    <img
+                      class="item__star-active-image"
+                      src="@img/icons/star-blue.svg"
+                      alt="звезда"
+                    />
+                  </button>
+                </div>
+                <div class="item__brand">LOGO</div>
+                <div class="item__title">Кеды</div>
+                <div class="item__price">15.000₽</div>
+                <a href="" class="button item__cart-button">В корзину</a>
+              </div>
+              <div class="favorites__acquired acquired">
+                <div class="acquired__text">
+                  Хлопковая футболка Ann Demeulemeester INT M
+                </div>
+                <a href="" class="acquired__link">Вернуть</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="similar">
+          <div class="similar__container">
+            <div class="similar__top">
+              <h2 class="similar__title title">Недавно смотрели</h2>
+              <div class="similar__arrows">
+                <button
+                  id="sim1"
+                  type="button"
+                  class="similar__arrow similar__prev"
+                >
+                  <img src="@img/icons/arrow-white.svg" alt="стрелочка" />
+                </button>
+                <button
+                  id="sim2"
+                  type="button"
+                  class="similar__arrow similar__next"
+                >
+                  <img src="@img/icons/arrow-white.svg" alt="стрелочка" />
+                </button>
+              </div>
+            </div>
+            <div class="similar__slider">
+              <div class="similar__wrapper">
+                <a href="" class="popular__item item">
+                  <div class="item__image">
+                    <picture>
+                      <source
+                        srcset="@img/categories/01.webp"
+                        type="image/webp"
+                      />
+                      <img src="@img/categories/01.png" alt="картинка" />
+                    </picture>
+                    <button class="item__star item__star_active">
+                      <img src="@img/icons/star.svg" alt="звезда" />
+                      <img
+                        class="item__star-active-image"
+                        src="@img/icons/star-blue.svg"
+                        alt="звезда"
+                      />
+                    </button>
+                  </div>
+                  <div class="item__brand">LOGO</div>
+                  <div class="item__title">Кеды</div>
+                  <div class="item__price">15.000₽</div>
+                </a>
+                <a href="" class="popular__item item">
+                  <div class="item__image">
+                    <picture>
+                      <source
+                        srcset="@img/categories/01.webp"
+                        type="image/webp"
+                      />
+                      <img src="@img/categories/01.png" alt="картинка" />
+                    </picture>
+                    <button class="item__star item__star_active">
+                      <img src="@img/icons/star.svg" alt="звезда" />
+                      <img
+                        class="item__star-active-image"
+                        src="@img/icons/star-blue.svg"
+                        alt="звезда"
+                      />
+                    </button>
+                  </div>
+                  <div class="item__brand">LOGO</div>
+                  <div class="item__title">Кеды</div>
+                  <div class="item__price">15.000₽</div>
+                </a>
+                <a href="" class="popular__item item">
+                  <div class="item__image">
+                    <picture>
+                      <source
+                        srcset="@img/categories/01.webp"
+                        type="image/webp"
+                      />
+                      <img src="@img/categories/01.png" alt="картинка" />
+                    </picture>
+                    <button class="item__star item__star_active">
+                      <img src="@img/icons/star.svg" alt="звезда" />
+                      <img
+                        class="item__star-active-image"
+                        src="@img/icons/star-blue.svg"
+                        alt="звезда"
+                      />
+                    </button>
+                  </div>
+                  <div class="item__brand">LOGO</div>
+                  <div class="item__title">Кеды</div>
+                  <div class="item__price">15.000₽</div>
+                </a>
+                <a href="" class="popular__item item">
+                  <div class="item__image">
+                    <picture>
+                      <source
+                        srcset="@img/categories/01.webp"
+                        type="image/webp"
+                      />
+                      <img src="@img/categories/01.png" alt="картинка" />
+                    </picture>
+                    <button class="item__star item__star_active">
+                      <img src="@img/icons/star.svg" alt="звезда" />
+                      <img
+                        class="item__star-active-image"
+                        src="@img/icons/star-blue.svg"
+                        alt="звезда"
+                      />
+                    </button>
+                  </div>
+                  <div class="item__brand">LOGO</div>
+                  <div class="item__title">Кеды</div>
+                  <div class="item__price">15.000₽</div>
+                </a>
+                <a href="" class="popular__item item">
+                  <div class="item__image">
+                    <picture>
+                      <source
+                        srcset="@img/categories/01.webp"
+                        type="image/webp"
+                      />
+                      <img src="@img/categories/01.png" alt="картинка" />
+                    </picture>
+                    <button class="item__star item__star_active">
+                      <img src="@img/icons/star.svg" alt="звезда" />
+                      <img
+                        class="item__star-active-image"
+                        src="@img/icons/star-blue.svg"
+                        alt="звезда"
+                      />
+                    </button>
+                  </div>
+                  <div class="item__brand">LOGO</div>
+                  <div class="item__title">Кеды</div>
+                  <div class="item__price">15.000₽</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/contacts.html')
+      </main>
+      @@include('html/footer.html')
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

@@ -266,4 +266,71 @@ function windowLoad() {
         });
     }
 
+
+
+    //для буков в брендах
+    const alphabetContainer = document.getElementById('alphabetContainer');
+    const searchInput = document.getElementById('searchInput');
+    if (alphabetContainer && searchInput) {
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        alphabet.split('').forEach(letter => {
+            const button = document.createElement('button');
+            button.classList.add('button-alphabet')
+            button.textContent = letter;
+            button.type = 'button';
+            alphabetContainer.appendChild(button);
+        });
+    }
+
+    const miniSliderGiftCard = document.querySelector('.mini-slider-gift-card');
+    if (miniSliderGiftCard) {
+        swp = new Swiper(miniSliderGiftCard, {
+            modules: [Mousewheel],
+            wrapperClass: 'mini-slider-gift-card__wrapper',
+            slideClass: 'mini-slider-gift-card__slide',
+            direction: 'vertical',
+            slidesPerView: 6,
+            loop: false,
+            speed: 800,
+            spaceBetween: 0,
+            observer: true,
+            mousewheel: {
+                invert: true,
+            },
+            breakpoints: {
+                480: {
+                    direction: 'vertical',
+                    slidesPerView: 6,
+                },
+                0: {
+                    slidesPerView: 3,
+                    direction: 'horizontal',
+                },
+            },
+            observeParents: true,
+            observeSlideChildren: true
+        });
+    }
+    const sliderGiftCard = document.querySelector('.slider-gift-card');
+    if (sliderGiftCard) {
+        new Swiper(sliderGiftCard, {
+            modules: [Keyboard, Thumbs],
+            wrapperClass: 'slider-gift-card__wrapper',
+            slideClass: 'slider-gift-card__slide',
+            direction: 'horizontal',
+            slidesPerView: 1,
+            loop: false,
+            speed: 800,
+            spaceBetween: 20,
+            observer: true,
+            thumbs: {
+                swiper: swp
+            },
+            observeParents: true,
+            observeSlideChildren: true,
+            keyboard: {
+                enabled: true,
+            }
+        });
+    }
 }

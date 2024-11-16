@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Главная' })
+  <body>
+    < class="wrapper"> @@include('html/header.html')
+    <main class="page">
+      <div class="cabinet">
+        <div class="cabinet__container">
+          @@include('html/menu.html')
+          <section class="cabinet__content">
+            <h1 class="cabinet__main-title title">Информация</h1>
+            <div class="cabinet__items">
+                <a href="" class="cabinet__item cabinet__item_arrow">
+                    Оплата
+                    <img src='@img/icons/arrow.svg' alt='стрелочка'>
+                </a>
+                <a href="" class="cabinet__item cabinet__item_arrow">
+                    Доставка
+                    <img src='@img/icons/arrow.svg' alt='стрелочка'>
+                </a>
+                <a href="" class="cabinet__item cabinet__item_arrow">
+                    Обмен и возврат
+                    <img src='@img/icons/arrow.svg' alt='стрелочка'>
+                </a>
+                <a href="" class="cabinet__item cabinet__item_arrow">
+                    Условия продажи
+                    <img src='@img/icons/arrow.svg' alt='стрелочка'>
+                </a>
+                <a href="" class="cabinet__item cabinet__item_arrow">
+                    Политика конфиденциальности
+                    <img src='@img/icons/arrow.svg' alt='стрелочка'>
+                </a>
+                <a href="" class="cabinet__item cabinet__item_arrow">
+                    Контакты
+                    <img src='@img/icons/arrow.svg' alt='стрелочка'>
+                </a>
+            </div>
+          </section>
+        </div>
+      </div>
+      @@include('html/contacts.html')
+    </main>
+    @@include('html/footer.html')
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
